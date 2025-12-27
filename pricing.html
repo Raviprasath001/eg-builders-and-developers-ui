@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Construction Packages Comparison - EverGreen</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Gold color from screenshot
+                        secondary: "#4A3B32", // Dark brown from screenshot
+                        "background-light": "#FFFBF2", // Creamy background from screenshot
+                        "background-dark": "#1A1614", // Dark background for dark mode
+                        "card-dark": "#2C2420",
+                        "accent-gold": "#E5C85E",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(90deg, #D4AF37 0%, #E5C85E 50%, #B89225 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-secondary dark:text-gray-200 font-sans transition-colors duration-300">
+    <header class="fixed top-0 z-50 w-full transition-all duration-300">
+        <div
+            class="absolute inset-0 bg-white/90 dark:bg-secondary/90 backdrop-blur-lg border-b border-primary/20 shadow-sm">
+        </div>
+        <div class="layout-container flex h-full flex-col relative z-10">
+            <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center">
+                <div class="layout-content-container flex w-full max-w-[1280px] items-center justify-between py-4">
+                    <div class="flex items-center gap-3 text-secondary dark:text-white group cursor-pointer">
+                        <div
+                            class="size-14 flex items-center justify-center rounded-2xl shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                            <img src="https://yt3.googleusercontent.com/diKwL26y_JG0OLCVCRYo8-p8vgIDw6MSRT6zb7aY-oIKDlFJD58KlVMdlS2awI74dLnbPS30lQ=s160-c-k-c0x00ffffff-no-rj"
+                                alt="EverGreen Builders and Developers Logo"
+                                class="w-full h-full object-cover rounded-2xl" />
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight font-serif text-secondary dark:text-primary-light">
+                            EverGreen <span class="text-primary font-extrabold">Builders and Developers</span></h2>
+                    </div>
+                    <nav
+                        class="hidden md:flex flex-1 justify-end gap-1 items-center bg-background-light/50 dark:bg-secondary-light/30 p-1 rounded-full border border-primary/20 backdrop-blur-sm mx-8">
+                        <a class="px-5 py-2 rounded-full text-sm font-medium text-secondary-light bg-primary/20 border border-primary/30 shadow-sm transition-all"
+                            href="code.html">Home</a>
+                        <a class="px-5 py-2 rounded-full text-sm font-medium text-secondary/80 dark:text-gray-300 hover:text-primary hover:bg-white/50 dark:hover:bg-secondary/50 transition-all"
+                            href="pricing.html">Pricing</a>
+                        <a class="px-5 py-2 rounded-full text-sm font-medium text-secondary/80 dark:text-gray-300 hover:text-primary hover:bg-white/50 dark:hover:bg-secondary/50 transition-all"
+                            href="#">Projects</a>
+                        <a class="px-5 py-2 rounded-full text-sm font-medium text-secondary/80 dark:text-gray-300 hover:text-primary hover:bg-white/50 dark:hover:bg-secondary/50 transition-all"
+                            href="#">About</a>
+                        <a class="px-5 py-2 rounded-full text-sm font-medium text-secondary/80 dark:text-gray-300 hover:text-primary hover:bg-white/50 dark:hover:bg-secondary/50 transition-all"
+                            href="#">Blog</a>
+                    </nav>
+                    <div class="hidden md:flex gap-4">
+                        <button
+                            class="flex cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-secondary dark:bg-primary text-primary dark:text-secondary text-sm font-bold shadow-lg shadow-secondary/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 border border-primary/20">
+                            <span class="truncate">Enquire Now</span>
+                        </button>
+                    </div>
+                    <button
+                        class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-secondary-light text-secondary dark:text-white hover:bg-gray-200 dark:hover:bg-secondary transition-colors">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 text-center">
+        <div
+            class="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-semibold text-sm tracking-wide uppercase mb-6">
+            Home Construction Packages
+        </div>
+        <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-secondary dark:text-white">
+            Crafting <span class="gold-gradient-text italic">Excellence</span>
+        </h1>
+        <p class="text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
+            Select the perfect construction package tailored for your dream home, blending quality, aesthetics, and
+            functionality.
+        </p>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="relative group">
+                <div
+                    class="absolute inset-0 bg-secondary rounded-2xl transform transition-transform group-hover:scale-[1.02] shadow-xl">
+                </div>
+                <div
+                    class="relative h-full bg-secondary dark:bg-card-dark rounded-2xl p-8 flex flex-col items-center text-center border border-stone-700 dark:border-stone-800 overflow-hidden">
+                    <span
+                        class="material-icons-outlined absolute top-4 right-4 text-9xl text-white/5 pointer-events-none select-none transform rotate-12">home</span>
+                    <h3 class="text-2xl font-display font-bold text-stone-300 mb-2">Standard Package</h3>
+                    <div class="flex items-baseline justify-center space-x-1 mb-8">
+                        <span class="text-lg text-primary">₹</span>
+                        <span class="text-4xl font-bold text-primary">2,549</span>
+                        <span class="text-stone-400">/ Sqft</span>
+                    </div>
+                    <button
+                        class="w-full py-3 px-6 rounded-lg bg-stone-800/80 hover:bg-stone-800 border border-primary/30 text-white font-medium transition-all duration-300 hover:border-primary mb-6 group-hover:bg-primary group-hover:text-secondary group-hover:border-primary">
+                        Request Callback
+                    </button>
+                    <p class="text-sm text-stone-400 mt-auto leading-relaxed border-t border-stone-700 pt-6 w-full">
+                        Quality construction with branded materials designed for durability and cost-efficiency.
+                    </p>
+                </div>
+            </div>
+            <div class="relative group transform md:-translate-y-4">
+                <div
+                    class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-secondary text-xs font-bold px-3 py-1 rounded-b-md z-20 shadow-lg">
+                    POPULAR</div>
+                <div
+                    class="absolute inset-0 bg-secondary rounded-2xl transform transition-transform group-hover:scale-[1.02] shadow-2xl ring-2 ring-primary/50">
+                </div>
+                <div
+                    class="relative h-full bg-secondary dark:bg-card-dark rounded-2xl p-8 flex flex-col items-center text-center border border-primary/30 overflow-hidden">
+                    <span
+                        class="material-icons-outlined absolute top-4 right-4 text-9xl text-primary/10 pointer-events-none select-none transform rotate-12">diamond</span>
+                    <h3 class="text-2xl font-display font-bold text-stone-200 mb-2">Premium Package</h3>
+                    <div class="flex items-baseline justify-center space-x-1 mb-8">
+                        <span class="text-lg text-primary">₹</span>
+                        <span class="text-5xl font-bold text-primary">2,799</span>
+                        <span class="text-stone-400">/ Sqft</span>
+                    </div>
+                    <button
+                        class="w-full py-3 px-6 rounded-lg gold-gradient-bg text-secondary font-bold transition-all duration-300 shadow-lg hover:shadow-primary/20 mb-6 transform group-hover:scale-105">
+                        Request Callback
+                    </button>
+                    <p class="text-sm text-stone-400 mt-auto leading-relaxed border-t border-stone-700 pt-6 w-full">
+                        Superior finishes and extended customization options for a refined living experience.
+                    </p>
+                </div>
+            </div>
+            <div class="relative group">
+                <div
+                    class="absolute inset-0 bg-secondary rounded-2xl transform transition-transform group-hover:scale-[1.02] shadow-xl">
+                </div>
+                <div
+                    class="relative h-full bg-secondary dark:bg-card-dark rounded-2xl p-8 flex flex-col items-center text-center border border-stone-700 dark:border-stone-800 overflow-hidden">
+                    <span
+                        class="material-icons-outlined absolute top-4 right-4 text-9xl text-white/5 pointer-events-none select-none transform rotate-12">workspace_premium</span>
+                    <h3 class="text-2xl font-display font-bold text-stone-300 mb-2">Ultra Luxury</h3>
+                    <div class="flex items-baseline justify-center space-x-1 mb-8">
+                        <span class="text-lg text-primary">₹</span>
+                        <span class="text-4xl font-bold text-primary">3,299</span>
+                        <span class="text-stone-400">/ Sqft</span>
+                    </div>
+                    <button
+                        class="w-full py-3 px-6 rounded-lg gold-gradient-bg text-secondary font-bold transition-all duration-300 opacity-90 hover:opacity-100 hover:shadow-lg mb-6 group-hover:scale-105">
+                        Request Callback
+                    </button>
+                    <p class="text-sm text-stone-400 mt-auto leading-relaxed border-t border-stone-700 pt-6 w-full">
+                        The pinnacle of luxury with Italian marble, advanced automation, and premium fixtures.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div
+            class="bg-white dark:bg-stone-900 rounded-2xl shadow-lg border border-stone-200 dark:border-stone-800 overflow-hidden">
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 bg-secondary text-white p-6 md:p-8 items-center gap-4 border-b border-stone-700">
+                <div class="font-display text-2xl font-bold md:col-span-1">Features</div>
+                <div class="text-center md:col-span-1">
+                    <div class="font-bold text-lg">Standard</div>
+                    <div class="text-stone-400 text-sm">Vastu Plan, 2D Scheme</div>
+                </div>
+                <div class="text-center md:col-span-1">
+                    <div class="font-bold text-lg text-primary">Premium</div>
+                    <div class="text-stone-400 text-sm">Vastu, 3D + Elec &amp; Plumbing</div>
+                </div>
+                <div class="text-center md:col-span-1">
+                    <div class="font-bold text-lg text-primary">Ultra Luxury</div>
+                    <div class="text-stone-400 text-sm">Vastu, 3D + Struct + Interior</div>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 border-b border-stone-100 dark:border-stone-800 hover:bg-stone-50 dark:hover:bg-stone-800/50 transition-colors">
+                <div
+                    class="p-6 flex items-start md:items-center space-x-3 md:border-r border-stone-100 dark:border-stone-800">
+                    <span class="material-icons-outlined text-primary text-2xl">foundation</span>
+                    <span class="font-bold text-secondary dark:text-white">Structure</span>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 space-y-1 md:border-r border-stone-100 dark:border-stone-800">
+                    <p><strong class="text-secondary dark:text-stone-200">Basement:</strong> Fly Ash 2.5ft</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Steel:</strong> Vizag/JSW</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Cement:</strong> Dalmia/Maha</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Concrete:</strong> M20</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 space-y-1 md:border-r border-stone-100 dark:border-stone-800 bg-orange-50/50 dark:bg-orange-900/10">
+                    <p><strong class="text-secondary dark:text-stone-200">Basement:</strong> Fly Ash 3ft</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Steel:</strong> Vizag/JSW</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Cement:</strong> ACC/Ramco</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Concrete:</strong> M25</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 space-y-1 bg-yellow-50/50 dark:bg-yellow-900/10">
+                    <p><strong class="text-secondary dark:text-stone-200">Basement:</strong> <span
+                            class="text-primary font-bold">Red Brick</span> 3.5ft</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Steel:</strong> Tata Tiscon</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Cement:</strong> UltraTech/Birla A1</p>
+                    <p><strong class="text-secondary dark:text-stone-200">Concrete:</strong> M25 Design Mix</p>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 border-b border-stone-100 dark:border-stone-800 hover:bg-stone-50 dark:hover:bg-stone-800/50 transition-colors">
+                <div
+                    class="p-6 flex items-start md:items-center space-x-3 md:border-r border-stone-100 dark:border-stone-800">
+                    <span class="material-icons-outlined text-primary text-2xl">kitchen</span>
+                    <span class="font-bold text-secondary dark:text-white">Kitchen</span>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 flex items-center">
+                    <p>Vitrified Tile (₹40), SS Sink (₹4k), Faucet (₹2k), Granite (₹100)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 bg-orange-50/50 dark:bg-orange-900/10 flex items-center">
+                    <p>Vitrified Tile (₹60), Quartz Sink (₹5k), Faucet (₹3k), Granite (₹140)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 bg-yellow-50/50 dark:bg-yellow-900/10 flex items-center">
+                    <p><strong class="text-secondary dark:text-stone-200">Premium GVT (₹90)</strong>, Handmade Sink
+                        (₹10k), Faucet (₹6k), <span class="text-primary font-bold">Nano White (₹250)</span></p>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 border-b border-stone-100 dark:border-stone-800 hover:bg-stone-50 dark:hover:bg-stone-800/50 transition-colors">
+                <div
+                    class="p-6 flex items-start md:items-center space-x-3 md:border-r border-stone-100 dark:border-stone-800">
+                    <span class="material-icons-outlined text-primary text-2xl">bathtub</span>
+                    <span class="font-bold text-secondary dark:text-white">Bathroom</span>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 flex items-center">
+                    <p>Tiles 7ft (₹40), Parryware (₹17k/room)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 bg-orange-50/50 dark:bg-orange-900/10 flex items-center">
+                    <p>Tiles 7ft (₹50), Parryware/CERA (₹22k/room)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 bg-yellow-50/50 dark:bg-yellow-900/10 flex items-center">
+                    <p><span class="text-primary font-bold">Full Height</span> (₹85), Kohler/Grohe (<strong
+                            class="text-secondary dark:text-stone-200">₹50k/room</strong>)</p>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 border-b border-stone-100 dark:border-stone-800 hover:bg-stone-50 dark:hover:bg-stone-800/50 transition-colors">
+                <div
+                    class="p-6 flex items-start md:items-center space-x-3 md:border-r border-stone-100 dark:border-stone-800">
+                    <span class="material-icons-outlined text-primary text-2xl">grid_view</span>
+                    <span class="font-bold text-secondary dark:text-white">Flooring</span>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 flex items-center">
+                    <p>4×2 Tiles (₹60), Balcony (₹50), Stair Tile (₹85)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 bg-orange-50/50 dark:bg-orange-900/10 flex items-center">
+                    <p>4×2 Tiles (₹80), Balcony (₹60), Stair Granite (₹120)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 bg-yellow-50/50 dark:bg-yellow-900/10 flex items-center">
+                    <p><span class="text-primary font-bold">Italian Marble</span> / 6×4 GVT (₹150), Stair Granite (₹180)
+                    </p>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 border-b border-stone-100 dark:border-stone-800 hover:bg-stone-50 dark:hover:bg-stone-800/50 transition-colors">
+                <div
+                    class="p-6 flex items-start md:items-center space-x-3 md:border-r border-stone-100 dark:border-stone-800">
+                    <span class="material-icons-outlined text-primary text-2xl">door_front</span>
+                    <span class="font-bold text-secondary dark:text-white">Doors</span>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 flex items-center">
+                    <p>Main Teak (₹40k), Internal Skin (₹2.5k)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 bg-orange-50/50 dark:bg-orange-900/10 flex items-center">
+                    <p>Main Teak (₹50k), Internal Skin (₹3k)</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 bg-yellow-50/50 dark:bg-yellow-900/10 flex items-center">
+                    <p>Main <span class="text-primary font-bold">Burma Teak</span> (₹75k), Internal Teak Frame (₹7k)</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-stone-50 dark:hover:bg-stone-800/50 transition-colors">
+                <div
+                    class="p-6 flex items-start md:items-center space-x-3 md:border-r border-stone-100 dark:border-stone-800">
+                    <span class="material-icons-outlined text-primary text-2xl">format_paint</span>
+                    <span class="font-bold text-secondary dark:text-white">Paint &amp; Elec</span>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 flex items-center">
+                    <p>Tractor Emulsion, Orbit Wires, Legrand</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 md:border-r border-stone-100 dark:border-stone-800 bg-orange-50/50 dark:bg-orange-900/10 flex items-center">
+                    <p>Premium Emulsion, Finolex Wires, GM Switches</p>
+                </div>
+                <div
+                    class="p-6 text-sm text-stone-600 dark:text-stone-400 bg-yellow-50/50 dark:bg-yellow-900/10 flex items-center">
+                    <p><span class="text-primary font-bold">Royale Play</span>, Finolex Gold, <span
+                            class="text-primary font-bold">Automation Ready</span></p>
+                </div>
+            </div>
+            <div class="bg-slate-100 dark:bg-stone-800 border-t border-stone-200 dark:border-stone-700 p-8 text-center">
+                <h4 class="text-sm font-bold text-secondary dark:text-white uppercase tracking-wider mb-3">Exclusions
+                    (Apply to all packages)</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed max-w-4xl mx-auto">
+                    Compound Wall &amp; Gate (@ 425/sqft) • Septic Tank/Sump excess volume (Rs.25/liter) • Lift •
+                    Electricity Connection • Building Approval • Borewell • Construction Water • EB
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="w-full bg-[#1A120E] text-gray-300 py-16 border-t border-primary/20">
+        <div class="layout-container flex justify-center">
+            <div class="layout-content-container flex flex-col w-full max-w-[1280px] px-4 md:px-10 lg:px-20 xl:px-40">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
+                    <div class="lg:col-span-6 flex flex-col gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="size-12 flex items-center justify-center rounded-2xl overflow-hidden">
+                                <img src="https://yt3.googleusercontent.com/diKwL26y_JG0OLCVCRYo8-p8vgIDw6MSRT6zb7aY-oIKDlFJD58KlVMdlS2awI74dLnbPS30lQ=s160-c-k-c0x00ffffff-no-rj"
+                                    alt="EverGreen Builders and Developers Logo"
+                                    class="w-full h-full object-cover rounded-2xl" />
+                            </div>
+                            <h3 class="font-bold text-2xl text-white font-serif">EverGreen <span
+                                    class="text-primary">Builders and Developers</span></h3>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed max-w-sm">
+                            Crafting landmarks since 1995. We are committed to delivering excellence in every square
+                            foot we construct, ensuring a legacy for generations to come.
+                        </p>
+                        <div class="flex gap-4 mt-2">
+                            <a class="w-10 h-10 rounded-full bg-secondary-light/30 border border-secondary-light/50 flex items-center justify-center hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300"
+                                href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+                            <a class="w-10 h-10 rounded-full bg-secondary-light/30 border border-secondary-light/50 flex items-center justify-center hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300"
+                                href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+                            <a class="w-10 h-10 rounded-full bg-secondary-light/30 border border-secondary-light/50 flex items-center justify-center hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300"
+                                href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 flex flex-col gap-6">
+                        <h4 class="font-bold text-white text-lg font-serif">Company</h4>
+                        <ul class="flex flex-col gap-3 text-sm">
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">Careers</a></li>
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">Our Team</a></li>
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">Media Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-3 flex flex-col gap-6">
+                        <h4 class="font-bold text-white text-lg font-serif">Projects</h4>
+                        <ul class="flex flex-col gap-3 text-sm">
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">Residential</a></li>
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">Commercial</a></li>
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">Ongoing</a></li>
+                            <li><a class="hover:text-primary transition-colors hover:translate-x-1 inline-block"
+                                    href="#">Completed</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-y border-primary/20 bg-white/5 py-10 my-8 backdrop-blur-sm">
+                    <div class="flex flex-col gap-8 max-w-5xl mx-auto">
+                        <!-- Address Section -->
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
+                            <div
+                                class="size-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                            </div>
+                            <p class="text-gray-200 text-lg font-light tracking-wide max-w-2xl">
+                                # 22, Nanjappa Chettiyar Street, Irugur Road, Ondipudur, <br
+                                    class="hidden md:block" />Coimbatore - 641 016. Tamil Nadu.
+                            </p>
+                        </div>
+
+                        <!-- Dividers for mobile -->
+                        <div
+                            class="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent md:hidden">
+                        </div>
+
+                        <!-- Contact Links Section -->
+                        <div
+                            class="flex flex-col md:flex-row flex-wrap justify-between items-center gap-6 md:gap-12 md:px-12">
+                            <!-- Phone -->
+                            <div class="flex items-center gap-4 group">
+                                <div
+                                    class="size-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-secondary group-hover:scale-110 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-sm">call</span>
+                                </div>
+                                <div class="flex flex-col items-center md:items-start">
+                                    <span class="text-[10px] text-primary uppercase tracking-widest font-bold mb-1">Call
+                                        Us</span>
+                                    <div class="flex gap-2 text-gray-300 group-hover:text-white transition-colors">
+                                        <a href="tel:+917418466884" class="hover:border-b hover:border-primary/50">+91
+                                            7418466884</a>
+                                        <span class="text-primary">/</span>
+                                        <a href="tel:+919818207429" class="hover:border-b hover:border-primary/50">+91
+                                            9818207429</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-center gap-4 group">
+                                <div
+                                    class="size-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-secondary group-hover:scale-110 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                </div>
+                                <div class="flex flex-col items-center md:items-start">
+                                    <span
+                                        class="text-[10px] text-primary uppercase tracking-widest font-bold mb-1">Email
+                                        Us</span>
+                                    <a href="mailto:mail@egbgroups.com"
+                                        class="text-gray-300 group-hover:text-white transition-colors hover:border-b hover:border-primary/50">mail@egbgroups.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Website -->
+                            <div class="flex items-center gap-4 group">
+                                <div
+                                    class="size-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-secondary group-hover:scale-110 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-sm">language</span>
+                                </div>
+                                <div class="flex flex-col items-center md:items-start">
+                                    <span
+                                        class="text-[10px] text-primary uppercase tracking-widest font-bold mb-1">Visit
+                                        Us</span>
+                                    <a href="https://www.egbgroups.com" target="_blank"
+                                        class="text-gray-300 group-hover:text-white transition-colors hover:border-b hover:border-primary/50">www.egbgroups.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-secondary-light/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                    <p>© 2024 EverGreen Builders and Developers Pvt Ltd. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                        <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
